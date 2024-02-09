@@ -1,0 +1,148 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+.form_connexion_inscription {
+    width: 600px; 
+    padding: 70px;
+    border: 1px solid #fff6f6; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+body {
+    margin: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    background-color: #f2f2f2;
+}
+
+
+
+
+
+
+
+.champ input {
+   
+    border: solid 1px #2222AA;
+    margin-bottom: 10px;
+    padding: 14px;
+    outline: none;
+    border-radius: 6px;
+    width: 100%; 
+    position: relative;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #555;
+
+    border: none;
+    outline: none;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+.link {
+    font-size: 12pt;
+    color: #EE6600;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+.cont_button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+} 
+
+
+
+.button_inscription {
+    background: #43A047;
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.15px;
+    border: none;
+    outline: none;
+    margin-right: 10px; 
+    color: #fff; 
+
+
+ 
+    
+  }
+
+.button_clear {
+    background: #a0437c;
+    width: 120px;
+    height: 50px;
+    border-radius: 0; 
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.15px;
+    border: none;
+    outline: none;
+    color: #ffffff; 
+    cursor: pointer; 
+    margin-right: 120px; 
+
+}
+
+.button_clear:hover {
+    background: #8e3874;
+}
+
+.logoP8 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logoP8 img {
+    width: 120px; 
+    height: auto;
+}
+
+
+#footer {
+
+    border-top: 1px solid #CCCCCC;
+    clear: both;
+    color: #999999;
+    padding: 0 0 1px;
+    position: relative;
+    text-align: center;
+    margin-top: 20px; 
+ }
+ 
+ #msgsecu {
+    border: 1px dotted #8EABBF;
+    float: left;
+    width: 500px;
+    padding: 20px;
+    margin-right: 100px;
+ 
+ }
+
+
+
+
+
