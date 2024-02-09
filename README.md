@@ -20,7 +20,7 @@ Si les informations fournies sont incorrectes ou si tous les champs ne sont pas 
 
 #### Formulaire d'Inscription (formulaire_Inscription.php)
 
-- Ce formulaire permet aux utilisateurs de créer leur propre compte en saisissant leur adresse e-mail au format ...@univ-p8, leur mot de passe et la confirmation du mot de passe. Si des informations incorrectes sont saisies ou si certains champs sont laissés vides, un message d'erreur approprié est affiché.
+- Ce formulaire permet aux utilisateurs de créer leur propre compte en saisissant leur adresse e-mail au format email@univ-p8, leur mot de passe et la confirmation du mot de passe. Si des informations incorrectes sont saisies ou si certains champs sont laissés vides, un message d'erreur approprié est affiché.
 
 #### Solutions de sécurité implémentées :
 
