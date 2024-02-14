@@ -39,7 +39,7 @@ Si les informations fournies sont incorrectes ou si tous les champs ne sont pas 
 #### Guide d'exécution en local
 1. Installer un serveur local tel que Wamp/Mamp.
 2. Ensuite, créez la base de données et téléchargez le fichier connexion_bdd.sql. Exécutez ensuite la requête SQL.
-3. Après cela dans le dossier, vous devez pouvoir vous connecter à la base de données en fournissant les informations suivantes :
+3. Après cela dans le dossier, vous devez pouvoir vous connecter à la base de données en fournissant les informations suivantes dans le fichier bdd.ini :
   - `Adresse du serveur MySQL : localhost`
   - `username`
   - `password`
