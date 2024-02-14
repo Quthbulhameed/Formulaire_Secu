@@ -43,13 +43,13 @@ $csrf_token = get_csrf_token();
     <div class="champ">
     <label for="password">Mot de passe</label>
        <input type="password" name="mdp1" placeholder="*********" oncopy="return false" onpaste="return false" drop="return false"    
-     oncut="return false" " >
+     oncut="return false" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" >
     </div>
 
     <div class="champ">
     <label for="password">Confirmation mot de passe</label>
        <input type="password" name="mdp2" placeholder="*********" oncopy="return false" onpaste="return false" drop="return false"    
-     oncut="return false"  >
+     oncut="return false" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  >
     </div>
 
     <div class="cont_button">
