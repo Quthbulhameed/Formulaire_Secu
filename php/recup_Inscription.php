@@ -1,9 +1,25 @@
 <?php
     ini_set('display_errors', 0);
-    session_start();
-?>
+    // ini_set('display_errors',  1);
+// ini_set('display_startup_errors',  1);
+// error_reporting(E_ALL);
 
-<?php
+
+    session_start();
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+        die("Token invalide");
+    }
+    RegistrationForm();
+} else {
+    die("invalide");
+}
+
+
+function RegistrationForm() {
+
     $valider = isset($_POST["button_inscription"]) ? $_POST["button_inscription"] : null;
     $email = isset($_POST["email"]) ? htmlspecialchars($_POST["email"]) : null;
     $mdp1 = isset($_POST["mdp1"]) ? htmlspecialchars($_POST["mdp1"]) : null;
@@ -12,12 +28,12 @@
 
 ///////////////
     if(isset($valider)){
-        include "db/connexion_bdd.php";
+        include "../db/connexion_bdd.php";
    ///////////////
         if(!empty($email) && !empty($mdp1) && !empty($mdp2)){
      
             if($mdp2 != $mdp1){
-                 $error = "Les mots de passe ne correspondent pas !";
+                 $error = "Les mots de passe ne correspondent pas";
                  header("Location: formulaire_Inscription.php");
             } else {
                 
@@ -38,7 +54,10 @@
                     
 ////////////////////////////:
                     if($reqIns){
-                        header("Location:formulaire_login.php") ;
+                        //ferme
+                        mysqli_stmt_close($reqIns);
+                        mysqli_close($con);
+                        header("Location:../index.php") ;
                     } else {
                          $error = "Inscription echoue";
                          header("Location: formulaire_Inscription.php");
@@ -56,4 +75,6 @@
         }
     }
     $_SESSION['error'] = $error;
+
+}
 ?>

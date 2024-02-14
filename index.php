@@ -1,3 +1,22 @@
+<?php
+
+session_start();
+
+function generate_csrf_token() {
+    return bin2hex(random_bytes(32));
+}
+
+function get_csrf_token() {
+    if (!isset($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = generate_csrf_token();
+    }
+    return $_SESSION['csrf_token'];
+}
+
+$csrf_token = get_csrf_token();
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -15,7 +34,8 @@
     </div>
 
 <body>
-    <form action="recup_login.php" method="POST" class="form_connexion_inscription">
+
+    <form action="php/recup_login.php" method="POST" class="form_connexion_inscription">
 
         <h1>Connection</h1>
 
@@ -36,16 +56,24 @@
         <input type="reset" value="EFFACER" class="button_clear" tabindex="5">
     </div>
 
+    <input type="hidden" name="csrf_token" value="<?= $csrf_token; ?>">
+
         <?php
-            session_start();
+        function escape($string) {
+            return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
+        }
             if(isset($_SESSION['error'])){
-                echo '<div class="error" style="color: red;">'.$_SESSION['error'].'</div>';
+                echo '<div class="error" style="color: red;">'.escape($_SESSION['error']).'</div>';
                 unset($_SESSION['error']);
+            }
+            if(isset($_SESSION['success'])){
+                echo '<div class="success" style="color: green;">'.escape($_SESSION['success']).'</div>';
+                unset($_SESSION['success']);
             }
         ?>
 
     <div id="footer">
-        <p class="link">Vous n'avez pas de compte ? <a href="formulaire_Inscription.php">Créer un compte</a></p>
+        <p class="link">Vous n'avez pas de compte ? <a href="php/formulaire_Inscription.php">Créer un compte</a></p>
     </div>
 
     <div id="msgsecu">
