@@ -34,7 +34,7 @@ Si les informations fournies sont incorrectes ou si tous les champs ne sont pas 
 - ini_set('display_errors', 0)
 - Cacher le contenu des dossiers
 - Token ou jeton de sécurité
-- Amélioration au niveau de la connexion à la bdd.
+- Amélioration au niveau de la connexion à la bdd
 
 #### Guide d'exécution en local
 1. Installer un serveur local tel que Wamp/Mamp.
