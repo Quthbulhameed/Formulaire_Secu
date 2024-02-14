@@ -14,6 +14,11 @@ CREATE TABLE `utilisateurs` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `utilisateurs` (`id_u`, `email`, `mdp`) VALUES
-(68,	'mika@univ-p8.com',	'$2y$10$YIT8Ey1tYy/HikyHXNCy7OuqszeR9uBU72fuAv5eCovVJ30GCOJdW');
+(1,	'sava@univ-p8.com',	'$2y$10$hSjtSMdb3ilJ/nl0uJtHHugJzwPGdzrWbBWXT2G8eb1wptgGSX3CK'),
+(2,	'sava2@univ-p8.com',	'$2y$10$FO68TVOrVgkcZjH/UmdCZOjWUuzIFFZyicjcflvCIbjKzaFrpC2Uy'),
+(3,	'lolo@univ-p8.com',	'$2y$10$Yrjcif/g9o4WM1ss5.3pLewjBHBg7Lm7O5diSplqlioZv7nWppK0O'),
+(4,	'ss@univ-p8.com',	'$2y$10$ZioKn.IWITVfsEZ6vrXXvuxHzmNnCj2rB56JG7y9527YYcVvvwESq'),
+(5,	'dd@univ-p8.com',	'$2y$10$681pjaxe2fPoa9hJDRi54.7Gm4R5PdOzl8A2enHmicSYUcgCI8dyC'),
+(6,	'qsava@univ-p8.com',	'$2y$10$v6gxtc5M68VF.VAdYaaxGOlTRyQGfCs1hiE7gSQGT29WyiB5PvMV.');
 
--- 2024-02-09 00:19:10
+-- 2024-02-14 19:31:08

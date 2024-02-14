@@ -32,6 +32,8 @@ Si les informations fournies sont incorrectes ou si tous les champs ne sont pas 
 - le mot de passe doit contenir au moins 6 caractères, 1 lettre, 1 chiffre et une majuscule.
 - Bloquer copie - colle du mot de passe
 - ini_set('display_errors', 0)
+- Cacher le contenu des dossiers
+- Token ou jeton de sécurité
 
 #### Guide d'exécution en local
 1. Installer un serveur local tel que Wamp/Mamp.
